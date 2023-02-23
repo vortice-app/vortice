@@ -1,0 +1,21 @@
+{
+  "content": [
+      {
+          "id": 1,
+          "header": "Slope",
+          "para": "This is Box 1",
+          "other": "Another key that's not necessarily used for all boxes"
+      },
+      {
+          "id": 2,
+          "header": "Box 2",
+          "para": "This is Box 2"
+      },
+      {
+          "id": 3,
+          "header": "Box 3",
+          "para": "This is Box 3",
+          "other": "Another key that's not necessarily used for all boxes"
+      }
+  ]
+}
