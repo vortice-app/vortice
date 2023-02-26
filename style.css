@@ -1,9 +1,15 @@
 .appframe {
-    width: 300px;
-  height: 250px;
-  border: 3px solid #ccc;
-  background: #eee;
-  margin: auto;
-  padding: 15px 10px;
-  border-radius: 90%;
+  border-radius: 30px;
+  height: 100px;
+  width: 100px;
+  
+}
+
+body {
+  background-image: linear-gradient(to bottom right, rgb(78, 78, 236),rgba(119, 119, 127, 0.837));
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+
 }
