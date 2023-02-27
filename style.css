@@ -6,6 +6,7 @@
   margin: auto;
   padding: 15px 10px;
   border-radius: 90%;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;  
@@ -20,4 +21,7 @@ h1{
 body{
   background: rgb(94,90,163);
   background: linear-gradient(219deg, rgba(94,90,163,1) 0%, rgba(122,9,12,1) 46%, rgba(0,212,255,1) 100%);
+}
+h1 {
+  font-family: 'Anton', sans-serif;
 }
