@@ -3,7 +3,9 @@
   height: 200px;
   border: 3px solid #ccc;
   border-radius: 25px;
-
+  object-fit: cover;
+  width: 230px;
+  height: 230px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;  
