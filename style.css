@@ -31,7 +31,9 @@ h1 {
   -moz-border-radius: 1%;
   border-radius: 1%;
   background-color: gray;
-  color: white;
   text-align: center;
   font-size: 2em;
+}
+a:visited{
+  color: floralwhite;
 }
