@@ -34,6 +34,6 @@ h1 {
   text-align: center;
   font-size: 2em;
 }
-a:visited{
-  color: floralwhite;
+a:any-link{
+  color: white;
 }
