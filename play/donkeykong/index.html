@@ -1,0 +1,252 @@
+<html>
+
+<head>
+    <script src="/play/donkeykong/aframe.min.js"></script>
+    <script src="/play/donkeykong/aframe-spritesheet-component.js"></script>
+    <script src="/play/donkeykong/aframe-animation-component.min.js"></script>
+    <script src="https://sdk.altvr.com/libs/altspace.js/2.9.0/altspace.min.js"></script>
+    <script>
+        AFRAME.registerComponent("start-game", {
+
+           init: function(){
+                var el = this.el;
+                var kong = document.getElementById("kong");
+                var screen16 = document.getElementById("screen16-plane");
+                var screen17 = document.getElementById("screen17-plane");
+                var screen18 = document.getElementById("screen18-plane");
+                var screen19 = document.getElementById("screen19-plane");
+                var screen20 = document.getElementById("screen20-plane");
+                var screen21 = document.getElementById("screen21-plane");
+                var screen22 = document.getElementById("screen22-plane");
+                var intro = document.getElementById("intro-entity");
+                var introjump = document.getElementById("intro-jump-entity");
+                var introsound = document.getElementById("intro-sound-entity");
+                var princess = document.getElementById("princess-plane");
+                var game = document.getElementById("game-plane");
+                var barrels = document.getElementById("barrels-plane");
+                el.object3D.addEventListener("cursordown", function(){
+                        el.setAttribute("visible", false);
+                        var firstAnim = setTimeout(function(){
+                        intro.components.sound.playSound();
+                        kong.setAttribute("opacity", 1);
+                        kong.emit("start-anim");
+                        },700);
+                        var secondAnim = setTimeout(function(){
+                                kong.emit("start-anim-2");
+                                kong.setAttribute("sprite-sheet", "progress", 0);
+                        },6000);
+                        var thirdAnim = setTimeout(function(){
+                                kong.emit("start-anim-3");
+                        },6900);
+                        var fourthAnim = setTimeout(function(){
+                                kong.setAttribute("sprite-sheet", "firstFrame", 5);
+                                screen17.setAttribute("material", "opacity", "1");
+                                princess.setAttribute("material", "opacity", "1");
+                        },7400);
+                        var fifthAnim = setTimeout(function(){
+                                kong.emit("start-anim-4");
+                        },7800);
+                        var sixthAnim = setTimeout(function(){
+                                screen18.setAttribute("material", "opacity", "1");
+                                kong.emit("start-anim-5");
+                                introjump.components.sound.playSound();
+                        },8050);
+                        var seventhAnim = setTimeout(function(){
+                                kong.emit("start-anim-6");
+                        },8300);
+                        var eightAnim = setTimeout(function(){
+                                screen19.setAttribute("material", "opacity", "1");
+                                kong.emit("start-anim-7");
+                                introjump.components.sound.playSound();
+                        },8550);
+                        var ninthAnim = setTimeout(function(){
+                                kong.emit("start-anim-8");
+                        },8800);
+                        var tenthAnim = setTimeout(function(){
+                                screen20.setAttribute("material", "opacity", "1");
+                                kong.emit("start-anim-9");
+                                introjump.components.sound.playSound();
+                        },9050);
+                        var eleventhAnim = setTimeout(function(){
+                                kong.emit("start-anim-10");
+                        },9300);
+                        var twelveAnim = setTimeout(function(){
+                                screen21.setAttribute("material", "opacity", "1");
+                                kong.emit("start-anim-11");
+                                kong.setAttribute("sprite-sheet", "firstFrame", 4);
+                                introjump.components.sound.playSound();
+                        },9550);
+                        var highScreen = setTimeout(function(){
+                                introsound.components.sound.playSound();
+                                kong.setAttribute("material", "opacity", "0");
+                                princess.setAttribute("material", "opacity", "0");
+                                screen22.setAttribute("material", "opacity", "1");
+                        },11000);
+                        var gameStart = setTimeout(function(){
+                            screen22.setAttribute("position", "0 2.5 0.010");
+                            game.setAttribute("material", "opacity", "1");
+                            kong.setAttribute("material", "opacity", "1");
+                            princess.setAttribute("material", "opacity", "1");
+                            barrels.setAttribute("material", "opacity", "1");
+                        },16000)
+
+                })
+            }
+        })
+    </script>
+    <script>
+        var triggerAnim = false;
+        AFRAME.registerComponent("kong", {
+            tick: function(){
+                var el = this.el;
+                var yPos = el.getAttribute("position").y;
+                console.log(yPos);
+                var screen = document.getElementById("screen-plane");
+                var screen2 = document.getElementById("screen2-plane");
+                var screen3 = document.getElementById("screen3-plane");
+                var screen4 = document.getElementById("screen4-plane");
+                var screen5 = document.getElementById("screen5-plane");
+                var screen6 = document.getElementById("screen6-plane");
+                var screen7 = document.getElementById("screen7-plane");
+                var screen8 = document.getElementById("screen8-plane");
+                var screen9 = document.getElementById("screen9-plane");
+                var screen10 = document.getElementById("screen10-plane");
+                var screen11 = document.getElementById("screen11-plane");
+                var screen12 = document.getElementById("screen12-plane");
+                var screen13 = document.getElementById("screen13-plane");
+                var screen14 = document.getElementById("screen14-plane");
+                var screen15 = document.getElementById("screen15-plane");
+                if (yPos > 0.4) {
+                    screen2.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 0.6) {
+                    screen3.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 0.8) {
+                    screen4.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 1) {
+                    screen5.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 1.2) {
+                    screen6.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 1.4) {
+                    screen7.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 1.6) {
+                    screen8.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 1.8) {
+                    screen9.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 2) {
+                    screen10.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 2.2) {
+                    screen11.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 2.4) {
+                    screen12.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 2.6) {
+                    screen13.setAttribute("material", "opacity", "1");
+                }
+                if (yPos > 2.8) {
+                    screen14.setAttribute("material", "opacity", "1");
+                }
+                if (yPos == 3) {
+                    screen15.setAttribute("material", "opacity", "1");
+                }
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <a-scene altspace="fullspace: true">
+        <a-assets>
+            <!-- Screens -->
+            <img id="screen1" src="/play/donkeykong/sprites/screen1.png"></img>
+            <img id="screen2" src="/play/donkeykong/sprites/screen2.png"></img>
+            <img id="screen3" src="/play/donkeykong/sprites/screen3.png"></img>
+            <img id="screen4" src="/play/donkeykong/sprites/screen4.png"></img>
+            <img id="screen5" src="/play/donkeykong/sprites/screen5.png"></img>
+            <img id="screen6" src="/play/donkeykong/sprites/screen6.png"></img>
+            <img id="screen7" src="/play/donkeykong/sprites/screen7.png"></img>
+            <img id="screen8" src="/play/donkeykong/sprites/screen8.png"></img>
+            <img id="screen9" src="/play/donkeykong/sprites/screen9.png"></img>
+            <img id="screen10" src="/play/donkeykong/sprites/screen10.png"></img>
+            <img id="screen11" src="/play/donkeykong/sprites/screen11.png"></img>
+            <img id="screen12" src="/play/donkeykong/sprites/screen12.png"></img>
+            <img id="screen13" src="/play/donkeykong/sprites/screen13.png"></img>
+            <img id="screen14" src="/play/donkeykong/sprites/screen14.png"></img>
+            <img id="screen15" src="/play/donkeykong/sprites/screen15.png"></img>
+            <img id="screen16" src="/play/donkeykong/sprites/screen16.png"></img>
+            <img id="screen17" src="/play/donkeykong/sprites/screen17.png"></img>
+            <img id="screen18" src="/play/donkeykong/sprites/screen18.png"></img>
+            <img id="screen19" src="/play/donkeykong/sprites/screen19.png"></img>
+            <img id="screen20" src="/play/donkeykong/sprites/screen20.png"></img>
+            <img id="screen21" src="/play/donkeykong/sprites/screen21.png"></img>
+            <img id="screen22" src="/play/donkeykong/sprites/screen22.png"></img>
+            <img id="game" src="/play/donkeykong/sprites/game-plane.png"></img>
+            <!-- Sprites -->
+            <img id="kongclimb" src="/play/donkeykong/sprites/cinematic.png"><img>
+            <img id="ladders" src="/play/donkeykong/sprites/ladder-part.png"><img>
+            <img id="princess" src="/play/donkeykong/sprites/princess.png"><img>
+            <img id="barrels" src="/play/donkeykong/sprites/barrels.png"><img>
+            <img id="barrel-roll" src="/play/donkeykong/sprites/barrel-roll.png"><img>
+            <!--Sounds -->
+            <audio id="intro" src="/play/donkeykong/sounds/intro.ogg"></audio>
+            <audio id="introjump" src="/play/donkeykong/sounds/introjump.ogg"></audio>
+            <audio id="introsound" src="/play/donkeykong/sounds/introsound.ogg"></audio>
+        </a-assets>
+        <a-box id="start-game" start-game position="0 7 0"></a-box>
+        <a-plane id="screen-plane" src="#screen1" position="0 2.5 0" scale="4.5 5 4.5"></a-plane>
+        <a-plane id="screen2-plane" src="#screen2" position="0 2.5 0.001" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen3-plane" src="#screen3" position="0 2.5 0.002" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen4-plane" src="#screen4" position="0 2.5 0.003" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen5-plane" src="#screen5" position="0 2.5 0.004" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen6-plane" src="#screen6" position="0 2.5 0.005" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen7-plane" src="#screen7" position="0 2.5 0.006" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen8-plane" src="#screen8" position="0 2.5 0.007" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen9-plane" src="#screen9" position="0 2.5 0.008" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen10-plane" src="#screen10" position="0 2.5 0.009" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen11-plane" src="#screen11" position="0 2.5 0.010" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen12-plane" src="#screen12" position="0 2.5 0.011" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen13-plane" src="#screen13" position="0 2.5 0.012" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen14-plane" src="#screen14" position="0 2.5 0.013" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen15-plane" src="#screen15" position="0 2.5 0.014" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen16-plane" src="#screen16" position="0 2.5 0.015" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen17-plane" src="#screen17" position="0 2.5 0.016" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen18-plane" src="#screen18" position="0 2.5 0.017" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen19-plane" src="#screen19" position="0 2.5 0.018" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen20-plane" src="#screen20" position="0 2.5 0.019" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen21-plane" src="#screen21" position="0 2.5 0.020" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="screen22-plane" src="#screen22" position="0 2.5 0.021" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="game-plane" src="#screen22" position="0 2.5 0.021" scale="4.5 5 4.5" material="opacity: 0"></a-plane>
+        <a-plane id="barrels-plane" src="#barrels" position="-2 3.56 0.022" scale="0.3 0.4 0.3" material="opacity: 0; transparent: true"></a-plane>
+        <a-plane id="princess-plane" src="#princess" position="0.2 4 0.022" scale="0.2 0.2 0.2" material="opacity: 0; transparent: true"></a-plane>
+        <a-entity id="intro-entity" sound="src: #intro"></a-entity>
+        <a-entity id="intro-jump-entity" sound="src: #introjump"></a-entity>
+        <a-entity id="intro-sound-entity" sound="src: #introsound"></a-entity>
+
+        <a-plane id="kong" kong src="#kongclimb" material="transparent: true; opacity: 0" position="0.2 0.3 0.030" sprite-sheet="cols:3; rows: 2; progress: 0; firstFrame: 2; lastFrame: 3;"
+                 animation__1="property: position; to: 0.2 3 0.030; dur: 5000; easing: linear; startEvents: start-anim"
+                 animation__2="property: position; from: 0.2 3 0.030; to: 0.2 4.2 0.030; dur: 1000; easing: easeOutSine; startEvents: start-anim-2"
+                 animation__3="property: position; from: 0.2 4.2 0.030; to: 0.2 3.75 0.030; dur: 500; easing: easeInSine; startEvents: start-anim-3"
+                 animation__4="property: position; from: 0.2 3.75 0.030; to: 0 3.9 0.030; dur: 250; easing: easeInSine; startEvents: start-anim-4"
+                 animation__5="property: position; from: 0 3.9 0.030; to: -0.2 3.75 0.030; dur: 250; easing: easeInSine; startEvents: start-anim-5"
+                 animation__6="property: position; from: -0.2 3.75 0.030; to: -0.4 3.9 0.030; dur: 250; easing: easeInSine; startEvents: start-anim-6"
+                 animation__7="property: position; from: -0.4 3.9 0.030; to: -0.6 3.75 0.030; dur: 250; easing: easeInSine; startEvents: start-anim-7"
+                 animation__8="property: position; from: -0.6 3.75 0.030; to: -0.8 3.9 0.030; dur: 250; easing: easeInSine; startEvents: start-anim-8"
+                 animation__9="property: position; from: -0.8 3.9 0.030; to: -1 3.75 0.030; dur: 250; easing: easeInSine; startEvents: start-anim-9"
+                 animation__10="property: position; from: -1 3.75 0.030; to: -1.2 3.9 0.030; dur: 250; easing: easeInSine; startEvents: start-anim-10"
+                 animation__11="property: position; from: -1.2 3.9 0.030; to: -1.4 3.75 0.030; dur: 250; easing: easeInSine; startEvents: start-anim-11"
+                 animation__12="property: position; from: -1.4 3.75 0.030; to: -1.6 3.9 0.030; dur: 250; easing: easeInSine; startEvents: start-anim-12"
+                 animation__13="property: position; from: -1.6 3.9 0.030; to: -1.8 3.75 0.030; dur: 250; easing: easeInSine; startEvents: start-anim-13"        
+                 animation__sprite="property: sprite-sheet.progress; from: 0; to: 1; dur: 400; loop: 12; startEvents: start-anim"></a-plane>
+    </a-scene>
+</body>
+
+</html>
