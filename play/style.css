@@ -1,4 +1,4 @@
-.appframe {
+img {
   border-radius: 25%;
   width: 200px;
   height: 200px;
@@ -31,4 +31,8 @@
     background-color: gray;
     text-align: center;
     font-size: 2em;
+}
+body{
+  background: rgb(94,90,163);
+  background: linear-gradient(219deg, rgba(94,90,163,1) 0%, rgba(122,9,12,1) 46%, rgba(0,212,255,1) 100%);
 }
