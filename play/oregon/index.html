@@ -1,0 +1,35 @@
+<div class="pcejs pcejs-container">
+    <div class="pcejs pcejs-loading-status">Downloading...</div>
+    <div class="pcejs-border">
+      <canvas class="pcejs pcejs-canvas" oncontextmenu="event.preventDefault()"></canvas>
+    </div>
+  </div>
+  
+  <p class="pcejs">press esc + &uarr; to zoom in, esc + &darr; to zoom out</p>
+  <script type="text/javascript" src="https://unpkg.com/pcejs-macplus@0.2.2/pcejs-macplus.umd.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/pcejs-util@0.2.2/pcejs-util.umd.js"></script>
+  <script>
+    // add a load progress bar. not required, but good ux
+    var loadingStatus = PCEJSUtil.loadingStatus(
+      document.querySelector('.pcejs-loading-status')
+    );
+    PCEJSMacplus({
+      arguments: ['-c', 'pce-config.cfg', '-r'],
+      autoloadFiles: [
+        'https://jamesfriend.com.au/pce-js/codepen/mac-plus.rom', // a macintosh rom file (you can use this one or any rom from an early macintosh eg. classic or earlier)
+        'https://jamesfriend.com.au/pce-js/codepen/hd1.qed', // a macintosh disk image (replace this file with your own)
+        'https://jamesfriend.com.au/pce-js/codepen/pce-config.cfg', // the PCE config file (edit and replace this file with your own)
+        'https://unpkg.com/pcejs-macplus@latest/macplus-pcex.rom', // the PCE extension rom, from the pcejs-macplus package
+      ],
+      locateFile(filename) {
+        // allows you to specify the absolute path to where the .wasm file is located (from the pcejs-macplus package)
+        return 'https://unpkg.com/pcejs-macplus@latest/' + filename;
+      },
+      print: console.log.bind(console),
+      printErr: console.warn.bind(console),
+      canvas: document.querySelector('.pcejs-canvas'),
+      monitorRunDependencies: function(remainingDependencies) {
+        loadingStatus.update(remainingDependencies);
+      },
+    });
+  </script>
