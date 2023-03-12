@@ -1,12 +1,9 @@
-#appframe {
+.appframe {
+  border-radius: 25%;
   width: 200px;
   height: 200px;
-  border: 3px solid #ccc;
-  border-radius: 25px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 5px;  
+  float: left;
+  background: gray;
 }
 
 h1{
@@ -37,3 +34,7 @@ h1 {
 a:any-link{
   color: white;
 }
+.games {  
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;}
