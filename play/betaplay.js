@@ -8,20 +8,20 @@ var buttonArr21 = [
 
   {
     "name": "Asteroids",
-    "img": "/asteroids/anseroids.jpg",
+    "img": "/asteroids/asteroids.jpg",
     "url": "asteroids/",
     
   },
   {
     "name": "Circus Charlie",
-    "img": "play/circus/src/assets/icons/app_icon_1024x1024.png",
-    "url": "circus/",
+    "img": "circus/src/assets/icons/app_icon_1024x1024.png",
+    "url": "/play/circus/",
     
   },
   {
     "name": "Coil",
     "img": "/coil/favicon.ico",
-    "url": "coil/",
+    "url": "/play/coil/",
     
   },
   {
