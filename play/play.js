@@ -1,36 +1,24 @@
-var backend = "aHR0cHM6Ly9tYXRocGxheWdyb3VuZC5jbG91ZC9zZXJ2aWNlLw==";
-var url = atob(backend);
 
-var buttonArr21 = [
-  
-    
 
+var games = [
   {
-    "name": "Asteroids",
-    "url": "/play/asteroids/",
-    "img": "/play/asteroids/asteroids.jpg",
+    "name": "AsteSuper Mario",
+    "url": "/play/mario5/",
+    "img": "/play/mario5/mario5.png",
 },
 {
-  "name": "Circus Charlie",
-  "url": "/play/circus/",
-  "img": "/play/circus/circus.jpg",
+  "name": "Donkey Kong",
+  "url": "/play/donkeykong/",
+  "img": "/play/donkeykong/donkeykong.jpeg",
 },
 {
-  "name": "Coil",
+  "name": "Pacman",
   "url": "/play/coil/",
   "img": "/play/coil/coil.jpg",
 },
 {
-  "name": "Digger",
-  "url": "/play/digger/",
-  "img": "/play/asteroids/asteroids.jpg",
+  "name": "Phaser",
+  "url": "/play/phaser/",
+  "img": "/play/phaser/phaser.jpg",
 },
 ]
-
-function randomlink() {
-//console.log(Object.keys(randomlinks)[Math.floor(Math.random()*Object.keys(randomlinks).length)]);
-console.log(randomlinks[ Math.floor(Math.random() * randomlinks.length) ]['link']);
-window.location=randomlinks[ Math.floor(Math.random() * randomlinks.length) ]['link'];
-
-}
-
