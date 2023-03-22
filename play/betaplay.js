@@ -1,14 +1,8 @@
-var backend = "aHR0cHM6Ly9tYXRocGxheWdyb3VuZC5jbG91ZC9zZXJ2aWNlLw==";
-var url = atob(backend);
-var roblox = "aHR0cHM6Ly9reGQuZm0vcm9ibG94";
-var krunker = "aHR0cHM6Ly9icm93c2VyZnBzLmNvbS8=";
-var BBstars = "aHR0cHM6Ly8za2gwLmdpdGh1Yi5pby9wcm9qZWN0cy9iYXNrZXRiYWxsLXN0YXJzL2luZGV4Lmh0bWw=";
-
 var buttonArr21 = [
 
   {
     "name": "Asteroids",
-    "img": "play/asteroids/asteroids.jpg",
+    "img": "asteroids/asteroids.jpg",
     "url": "asteroids/",
     
   },
@@ -20,7 +14,7 @@ var buttonArr21 = [
   },
   {
     "name": "Coil",
-    "img": "/coil/favicon.ico",
+    "img": "coil/favicon.ico",
     "url": "coil/",
     
   },
@@ -32,21 +26,21 @@ var buttonArr21 = [
   },
 
   {
-    "name": "TDonkey Kong",
+    "name": "Donkey Kong",
     "img": "donkeykong/donkeykong.jpeg",
     "url": "donkeykong/",
     
   },
   {
-    "name": "Duckhunt",
+    "name": "Duck Hunt",
     "img": "duckhunt/src/assets/images/dog/laugh/1.png",
     "url": "duckhunt/dist/",
     
   },
   {
-    "name": "Tsunami Fighter",
-    "img": "thumbnails/na.png",
-    "url": "gfiles/gfiles/flash/?swf=tsunamifighter.swf",
+    "name": "HexGL",
+    "img": "hexgl/icon_256.png",
+    "url": "hexgl/",
     
   },
   ]
@@ -72,7 +66,7 @@ var buttonArr21 = [
           //searchArr.push(arrayItem.name);
           let link2 = arrayItem21.url;
           let name2 = arrayItem21.name;
-          document.getElementById('buttonDiv').innerHTML += `<div style="width: 150px;"class="span1 animals"><div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card"><a href='gfiles/gfiles/lanucher/index.html?url=${arrayItem21.url}'><img width="145" height="145"style="border-radius: 25px;max-width:145px;max-height:145px;width:145px;height:145px" data-src="${arrayItem21.img}" class="lazy" style="width:100%"></a><p3 style="text-transform: uppercase;">${arrayItem21.name}</p3></div></div>`;
+          document.getElementById('buttonDiv').innerHTML += `<div style="width: 150px;"class="span1 animals"><div style="padding-top: 5px;border-radius: 25px 25px 25px 25px;" class="card"><a href='/play/'><img width="145" height="145"style="border-radius: 25px;max-width:145px;max-height:145px;width:145px;height:145px" data-src="${arrayItem21.img}" class="lazy" style="width:100%"></a><p3 style="text-transform: uppercase;">${arrayItem21.name}</p3></div></div>`;
   
   
           
