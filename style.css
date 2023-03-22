@@ -42,11 +42,12 @@ a:any-link{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  background-color: gray;
 }
 .row {  
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   background-color: gray;
+  font-family: 'Anton', sans-serif;
+  grid-template-columns: repeat(4, 60px);
 }
