@@ -7,21 +7,21 @@ var BBstars = "aHR0cHM6Ly8za2gwLmdpdGh1Yi5pby9wcm9qZWN0cy9iYXNrZXRiYWxsLXN0YXJzL
 var buttonArr21 = [
 
   {
-    "name": "Sprinter",
-    "img": "thumbnails/na.png",
-    "url": "gfiles/gfiles/flash/?swf=sprinter",
+    "name": "Asteroids",
+    "img": "/asteroids/anseroids.jpg",
+    "url": "asteroids/",
     
   },
   {
-    "name": "Stick RPG",
-    "img": "thumbnails/na.png",
-    "url": "gfiles/gfiles/flash/?swf=stickrpg.swf",
+    "name": "Circus Charlie",
+    "img": "play/circus/src/assets/icons/app_icon_1024x1024.png",
+    "url": "circus/",
     
   },
   {
-    "name": "Submachine 1",
-    "img": "thumbnails/na.png",
-    "url": "gfiles/gfiles/flash/?swf=submachine_1.swf",
+    "name": "Coil",
+    "img": "/coil/favicon.ico",
+    "url": "coil/",
     
   },
   {
