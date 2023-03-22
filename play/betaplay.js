@@ -2,8 +2,8 @@ var buttonArr21 = [
 
   {
     "name": "Asteroids",
-    "img": "asteroids/asteroids.jpg",
-    "url": "asteroids/",
+    "img": "astroids/asteroids.jpg",
+    "url": "astroids/",
     
   },
   {
