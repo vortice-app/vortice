@@ -1,20 +1,109 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Vortice - BETA</title>
+
+    </head>
+
+    <body id="body" >
+      <div  class="page" id="maincode">
+
+
+
+
+        <div class="belownavbar">
+
+            <!-- input tag -->
             <div style=" width: 69vw; margin-left: 15.5vw;"class="gameslist">
+                <h2 style="color:white;"></h2>
                 <br>
                 <div id='list' class="row">
                     <div style="padding-left: 20px" id="buttonDiv21"></div>
                 </div>
             </div>
+        </div>
 
-  
-
+        <div style=" width: 69vw; margin-left: 16vw;"class="gameslist">
+            <h2 style="color:white;"></h2>
+            <br>
+            <div id='list' class="row">
+                <div style="padding-left: 20px" id="buttonDiv211"></div>
+            </div>
+        </div>
     </div>
         <!---->
-
+        <div  style=" width: 69vw; margin-left: 16vw;z-index: 0;" class="gameslist">
+            <div class="row">
+                <div class="ab-div"style="padding-left: 20px" id="buttonDiv"></div>
+                <!---->
+            </div>
+        </div>
+        <!---->
+        <div  style=" width: 69vw; margin-left: 16vw;z-index: 0;" class="gameslist">
+            <div class="row">
+                <div style="padding-left: 20px" id="buttonDiv7"></div>
             </div>
             <script src="betaplay.js"></script>
         </div>
+        <!---->
+        <script>
+            function launch() {
+                let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+        width=0,height=0,left=-1000,top=-1000`;
+                open('https://forms.gle/1ZF8sHcK3U5fpoqr7', 'test', params);
+            }
 
-        <script src="/play/searchbar.js"></script>
+            function launch2() {
+                let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+        width=0,height=0,left=-1000,top=-1000`;
+                open('https://forms.gle/kSss9Qq3Rr6buhFc8', 'test', params);
+            }
+            document.addEventListener("DOMContentLoaded", function() {
+                var lazyloadImages = document.querySelectorAll("img.lazy");
+                var lazyloadThrottleTimeout;
 
+                function lazyload() {
+                    if (lazyloadThrottleTimeout) {
+                        clearTimeout(lazyloadThrottleTimeout);
+                    }
+                    lazyloadThrottleTimeout = setTimeout(function() {
+                        var scrollTop = window.pageYOffset;
+                        lazyloadImages.forEach(function(img) {
+                            if (img.offsetTop < (window.innerHeight + scrollTop)) {
+                                img.src = img.dataset.src;
+                                img.classList.remove('lazy');
+                            }
+                        });
+                        if (lazyloadImages.length == 0) {
+                            document.removeEventListener("scroll", lazyload);
+                            window.removeEventListener("resize", lazyload);
+                            window.removeEventListener("orientationChange", lazyload);
+                        }
+                    }, 20);
+                }
+                document.addEventListener("scroll", lazyload);
+                window.addEventListener("resize", lazyload);
+                window.addEventListener("orientationChange", lazyload);
+            });
 
+            function myFunction1() {
+                var x = document.getElementById("error-msg");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+
+            function opensettings() {
+                const id = document.getElementById("opensettingsid");
+                if (id.style.display === "none") {
+                    id.style.display = "block";
+                } else {
+                    id.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
