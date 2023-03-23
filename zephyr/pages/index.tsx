@@ -1,5 +1,5 @@
 import { Layout, Text, Page } from '@vercel/examples-ui'
-import { Chat } from '../components/Chat'
+import { Chat } from '/zephyr/components/Chat'
 
 function Home() {
   return (
