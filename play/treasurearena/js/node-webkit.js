@@ -18,7 +18,7 @@ var NW = function() {
     };
 
     this.url = {
-        remote: 'http://play.treasurearena.com'
+        remote: 'https://vortice.app/play/treasurearena'
     };
 
 
