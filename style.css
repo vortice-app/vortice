@@ -51,3 +51,10 @@ a:any-link{
   font-family: 'Anton', sans-serif;
   grid-template-columns: repeat(4, 60px);
 }
+.newgames{
+  background-color: black;
+}
+.coolannouncement{
+  font-family: 'Anton', sans-serif;
+  font-size: 5em;
+}
