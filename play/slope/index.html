@@ -4,9 +4,9 @@
 </head>
 
 <script defer src="/_vercel/insights/script.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/TemplateData/style.css">
-    <script src="https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/TemplateData/UnityProgress.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/TemplateData/unityloader41.js"></script>
+<link rel="stylesheet" href="/play/slope/style.css">
+    <script src="/play/slope/UnityProgress.js"></script>
+    <script src="/play/slope/unityloader41.js"></script>
 
     <script type="text/javascript">
       var gameInstance;
@@ -21,7 +21,7 @@
         bttn.style.left = ((document.body.clientWidth - bttn.offsetWidth)/2) + 'px';
         bttn.style.top = ((document.body.clientHeight - bttn.offsetHeight)/2) + 'px';
         bttn.onclick = function () {
-          gameInstance = UnityLoader.instantiate("gameContainer", "https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/Build/slope.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
+          gameInstance = UnityLoader.instantiate("gameContainer", "/play/slope/slope.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
           this.remove();
         }
       }
