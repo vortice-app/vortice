@@ -1,11 +1,22 @@
-.appframe {
+.gameappframe {
   border-radius: 25%;
   width: 200px;
   height: 200px;
   float: left;
   background: gray;
 }
-
+.appframe {
+  border-radius: 25%;
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+.pageframe {
+  border-radius: 25%;
+  width: 400px;
+  height: 400px;
+  float: left;
+}
 h1{
   font-family: 'Anton', sans-serif;
   font-size: 40px;
