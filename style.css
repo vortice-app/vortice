@@ -58,6 +58,11 @@ a:any-link{
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
+.row {  
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
 .betaappframe {  
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -66,6 +71,7 @@ a:any-link{
   font-family: 'Anton', sans-serif;
   grid-template-columns: repeat(4, 60px);
 }
+
 .newgames{
   background-color: black;
 }
