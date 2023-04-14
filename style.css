@@ -49,6 +49,10 @@ a:any-link{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;}
+  .pages {  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;}
 .gameslist {  
   display: grid;
   grid-template-columns: repeat(5, 1fr);
