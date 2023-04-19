@@ -21,7 +21,7 @@
         bttn.style.left = ((document.body.clientWidth - bttn.offsetWidth)/2) + 'px';
         bttn.style.top = ((document.body.clientHeight - bttn.offsetHeight)/2) + 'px';
         bttn.onclick = function () {
-          gameInstance = UnityLoader.instantiate("gameContainer", "/play/slope/slope.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
+          gameInstance = UnityLoader.instantiate("gameContainer", "slope.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
           this.remove();
         }
       }
