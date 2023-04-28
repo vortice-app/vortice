@@ -1,4 +1,4 @@
-const rootPath = "TemplateData56";
+const rootPath = "/play/TemplateData56";
 function UnityProgress(gameInstance, progress) {
     if (!gameInstance.Module) {
         return;
