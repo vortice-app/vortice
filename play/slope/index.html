@@ -12,7 +12,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Slope - Vortice Games</title>
-        <link href="/play/slope/shared/style.css" rel="stylesheet" />
+        <link href="/play/slope/style.css" rel="stylesheet" />
         <link rel="stylesheet" href="/play/slope/TemplateData56/style.css" />
         <script src="/play/slope/TemplateData56/UnityProgress.js"></script>
         <link rel="shortcut icon" href="/sources/vortice.png" />
@@ -48,7 +48,7 @@
                 if (!args[1].includes("arc.io")) args[1] = /^http/.test(args[1]) ? "https://onebigstatic-tmm.tbt.mx/static/" + args[1] : args[1];
                 origOpen.apply(this, args);
             };
-            var gameInstance = UnityLoader.instantiate("gameContainer", "Build/slope_27Sept.json", {
+            var gameInstance = UnityLoader.instantiate("gameContainer", "/play/slope/Build/slope_27Sept.json", {
                 onProgress: UnityProgress,
                 Module: {
                     onRuntimeInitialized: function () {
