@@ -1,7 +1,7 @@
 {
-  "name": "interstellar-web",
+  "name": "vortice-cuboid",
   "version": "4.1.4",
-  "description": "One of the best modern web proxies.",
+  "description": "Cuboid web proxy.",
   "type": "module",
   "engines": {
     "npm": ">=7.0.0",
