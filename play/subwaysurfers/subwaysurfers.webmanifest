@@ -2,7 +2,7 @@
     "short_name": "Subway Surfers",
     "name": "Subway Surfers Web",
     "description": "Web version of Subway Surfers game",
-    "start_url": ".",
+    "start_url": "/play/subwaysurfers/",
     "orientation":  "any",
     "background_color": "#0b316b",
     "display": "standalone",

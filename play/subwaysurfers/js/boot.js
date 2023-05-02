@@ -48,7 +48,7 @@ function initApp()
     }
 
     loadScript('/play/subwaysurfers/js/dependencies.bundle.js');
-    loadScript(window.MAIN ? window.MAIN : './js/index.js');
+    loadScript(window.MAIN ? window.MAIN : '/play/subwaysurfers/js/index.js');
 }
 
 /** Prevent arrows and space from scrolling browser */
