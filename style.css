@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 .gameappframe {
   border-radius: 25%;
   width: 200px;
@@ -20,7 +19,7 @@
   float: left;
 }
 h1{
-  font-family: 'Anton', sans-serif;
+  font-family: 'Russo One', sans-serif;
   font-size: 40px;
   color: white;
 }
@@ -30,14 +29,14 @@ body{
   background: linear-gradient(219deg, rgba(94,90,163,1) 0%, rgba(122,9,12,1) 46%, rgba(0,212,255,1) 100%);
 }
 h1 {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Russo One', sans-serif;
 }
 .topnav {
   color: white;
   display: inline-block;
   padding: 15px;
   line-height: 100%;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Russo One', sans-serif;
   -moz-border-radius: 1%;
   border-radius: 1%;
   background-color: gray;
@@ -70,7 +69,7 @@ a:any-link{
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   background-color: gray;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Russo One', sans-serif;
   grid-template-columns: repeat(4, 60px);
 }
 
@@ -78,6 +77,6 @@ a:any-link{
   background-color: black;
 }
 .coolannouncement{
-  font-family: 'Anton', sans-serif;
+  font-family: 'Russo One', sans-serif;
   font-size: 5em;
 }
