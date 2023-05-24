@@ -18,6 +18,3 @@ function loadJS(FILE_URL, async = true) {
   });
 }
 
-window.addEventListener("load", function () {
-  loadJS("ubg235_server_v1_0.js", false);
-});
