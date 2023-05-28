@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Three.js Gaming Background</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/134/three.min.js"></script>
+</head>
+<body>
+<canvas id="canvas" width="100%" height="100%"></canvas>
+<script>
+var scene = new THREE.Scene();
+
+// Create a background geometry
+var geometry = new THREE.BoxGeometry(1000, 1000, 1000);
+
+// Create a background material
+var material = new THREE.MeshBasicMaterial({
+  color: 0x000000,
+  });
+
+  // Create a background mesh
+  var mesh = new THREE.Mesh(geometry, material);
+
+  // Add the background mesh to the scene
+  scene.add(mesh);
+
+  // Create a camera
+  var camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, 1, 1100);
+
+  // Position the camera
+  camera.position.z = 500;
+
+  // Create a renderer
+  var renderer = new THREE.WebGLRenderer();
+  renderer.setSize(innerWidth, innerHeight);
+  document.getElementById("canvas").appendChild(renderer.domElement);
+
+  // Create a scene
+  var scene = new THREE.Scene();
+
+  // Create a directional light
+  var light = new THREE.DirectionalLight(0xffffff, 1);
+  light.position.set(0, 1000, 0);
+
+  // Add the light to the scene
+  scene.add(light);
+
+  // Create a cube
+  var cube = new THREE.Mesh(new THREE.BoxGeometry(100, 100, 100), new THREE.MeshBasicMaterial({
+    color: 0x0000ff,
+    }));
+
+    // Add the cube to the scene
+    scene.add(cube);
+
+    // Create a text object
+    var text = new THREE.Text("Three.js Gaming Background", new THREE.Font("Arial", 100));
+    text.position.set(0, 0, 0);
+
+    // Add the text object to the scene
+    scene.add(text);
+
+    // Create an animation loop
+    var animate = function () {
+      requestAnimationFrame(animate);
+
+        // Update the scene
+          scene.update();
+
+            // Render the scene
+              renderer.render(scene, camera);
+              };
+
+              // Start the animation loop
+              animate();
+              </script>
+              </body>
+              </html>
+              
