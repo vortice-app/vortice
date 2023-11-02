@@ -29,6 +29,8 @@ function AB() {
                     doc.head.appendChild(link);
                     doc.body.appendChild(iframe);
                     location.replace("https://classroom.google.com");
+                    var win = window.open("about:blank", "_self");
+                    win.close();
                 }
             }
         }
