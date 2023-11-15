@@ -1,12 +1,17 @@
 <html>
 <head>
-	<link rel="icon" type="image/x-icon" href="/sources/vortice.png">
+	<link rel="icon" type="image/x-icon" href="/sources/vortice.png"><link rel="stylesheet" type="text/css" href="/nav.css">
 	<title>Donkey Kong - Vortice Games</title> 
 	<script>Gl_browser=null</script>
 	<script src="/play/donkeykong/assets/gamelib_core.min.js"></script>
 	<script src="/play/donkeykong/assets/main.min.js"></script>
 </head>
 <body bgcolor="#000000" onload="if(Gl_browser)init();else reload()" style="overflow:hidden">
+	<div id="navblob">
+		<a href="/"><img src="/play/home.svg"></a>
+		<a href="/play/"><img src="/play/back.svg"></a>
+		<a href=""><img src="/play/reload.svg"></a>
+  </div>
 	<div id="preDiv" style="position:absolute; visibility:hidden; width:0; height:0; left:-1000px; top:0; overflow:hidden"></div>
 </body>
 </html>

@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="/sources/vortice.png">
+    <link rel="icon" type="image/x-icon" href="/sources/vortice.png"><link rel="stylesheet" type="text/css" href="/nav.css">
     <title>Pacman - Vortice Games</title> 
     
     <style type="text/css">
-      @font-face {
-	    font-family: 'BDCartoonShoutRegular';
-        src: url('BD_Cartoon_Shout-webfont.ttf') format('truetype');
-	    font-weight: normal;
-	    font-style: normal;
-      }
       #pacman {
         height:450px;
         width:342px;
@@ -23,20 +18,25 @@
         visibility:hidden
       }
       h1 { font-family: BDCartoonShoutRegular; text-align:center; }
-      body { width:342px; margin:0px auto; font-family:sans-serif; }
-      a { text-decoration:none; }
+      body {margin:0px auto; font-family:sans-serif; }
+      a { text-decoration:none;}
+      .center{text-align: center;}
     </style>
 
 </head>
 
-<body>
+<body>  <div id="navblob">
+  <a href="/"><img src="/play/home.svg"></a>
+  <a href="/play/"><img src="/play/back.svg"></a>
+  <a href=""><img src="/play/reload.svg"></a>
+</div>
 
   <div id="shim">shim for font face</div>
 
   <h1>HTML5 Pacman</h1>
 
-  <a href="http://arandomurl.com/">Writeup</a> |
-  Code on <a href="http://arandomurl.com/">Github</a>
+  <div class="center"><a href="http://arandomurl.com/">Writeup</a> |
+  Code on <a href="http://arandomurl.com/">Github</a></div>
 
   <div id="pacman"></div>
   <script src="/play/pacman/pacman.js"></script>

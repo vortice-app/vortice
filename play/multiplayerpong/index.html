@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="icon" type="image/x-icon" href="/sources/vortice.png">
+	<link rel="icon" type="image/x-icon" href="/sources/vortice.png"><link rel="stylesheet" type="text/css" href="/nav.css">
 	<title>Canvas Pong - Vortice Games</title> 
 
 	<style>
@@ -98,7 +98,11 @@
 
 	<script src="/play/multiplayerpong/initialization.js?v=0.1"></script>
 </head>
-<body>
+<body>  <div id="navblob">
+		<a href="/"><img src="/play/home.svg"></a>
+		<a href="/play/"><img src="/play/back.svg"></a>
+		<a href=""><img src="/play/reload.svg"></a>
+  </div>
 	<canvas id="pongCanvas" width="1000" height="600" border="1px solid #333"></canvas>
 	<canvas id="paddleCanvas" width="1000" height="600" border="1px solid #333"></canvas>
 

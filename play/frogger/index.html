@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Frogger - Vortice Games</title>
-    <link rel="icon" href="/sources/vortice.png"/>
+    <link rel="icon" type="image/x-icon" href="/sources/vortice.png"><link rel="stylesheet" type="text/css" href="/nav.css">
     <meta name="viewport" content="width=480, initial-scale=1.0">
     <style>
     @font-face {
@@ -26,7 +26,11 @@
     }
     </style>
 </head>
-<body>
+<body>  <div id="navblob">
+		<a href="/"><img src="/play/home.svg"></a>
+		<a href="/play/"><img src="/play/back.svg"></a>
+		<a href=""><img src="/play/reload.svg"></a>
+  </div>
     <canvas id="background-canvas" class="canvas" width="960" height="1280"></canvas>
     <canvas id="canvas" class="canvas" width="960" height="1280"></canvas>
 

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <link rel="icon" type="image/x-icon" href="/sources/vortice.png">
+    <link rel="icon" type="image/x-icon" href="/sources/vortice.png"><link rel="stylesheet" type="text/css" href="/nav.css">
     <title>Asteroids - Vortice Games</title> 
     <script src="jquery-1.4.1.min.js"></script>
     <script src="vector_battle_regular.typeface.js"></script>
@@ -17,7 +17,11 @@
       #space { width:200px; height:200px; bottom:0px; right:0px; }
     </style>
   </head>
-  <body>
+  <body>  <div id="navblob">
+		<a href="/"><img src="/play/home.svg"></a>
+		<a href="/play/"><img src="/play/back.svg"></a>
+		<a href=""><img src="/play/reload.svg"></a>
+  </div>
     <div id="game-container">
       <canvas id="canvas" width="1500" height="700"></canvas>
       <div id="left-controls">

@@ -16,9 +16,8 @@ function AB() {
                     const iframe = doc.createElement("iframe");
                     const style = iframe.style;
                     const link = doc.createElement("link");
-                    const name = localStorage.getItem("name") || "My Drive - Google Drive";
-                    const icon = localStorage.getItem("icon") || "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
-                    doc.title = name;
+                    const icon = "/sources/vortice.png";
+                    doc.title = "Vortice";
                     link.rel = "icon";
                     link.href = icon;
                     iframe.src = location.href;
@@ -34,3 +33,20 @@ function AB() {
                 }
             }
         }
+
+//        
+//
+//
+//
+//
+
+//Themessssss
+window.addEventListener("load", () => {
+    const themePicker = document.getElementById("theme-picker")
+    document.querySelector("html").setAttribute("data-theme", localStorage.getItem("theme"))
+    themePicker.addEventListener('change', function() {
+      const theme = this.value
+      document.querySelector("html").setAttribute("data-theme", theme)
+      localStorage.setItem("theme", theme);
+    })
+  })

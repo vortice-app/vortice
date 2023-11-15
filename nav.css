@@ -1,0 +1,15 @@
+#navblob{
+	background-color: white;
+	z-index: 100;
+	position: absolute;
+	opacity:0;
+	border-radius: 50px;
+
+}
+#navblob:hover{
+		opacity:1;
+	  }
+	
+#navblob img{
+	width: 3em;
+}
