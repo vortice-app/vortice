@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BitBuzz</title>
+    <link>bitbuzz/</link>
+    <description>Recent content on BitBuzz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="bitbuzz/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apple Adopts RCS</title>
+      <link>bitbuzz/apple-rcs/</link>
+      <pubDate>Sat, 18 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>bitbuzz/apple-rcs/</guid>
+      <description>On November 16, 2023, Apple announced that They will be supporting RCS on iPhone in 2024. This is huge, because Apple has always had iMessage locked down to only iPhones, and every other chatting experience was terrible, the chat bubble looks a hideous lime green, making it hard to read. But group chats have also been a terrible experience for cross-platform chats. Users were unable to leave, name the chat, add people, and video and photo quality was extremely lessened.</description>
+    </item>
+  </channel>
+</rss>
