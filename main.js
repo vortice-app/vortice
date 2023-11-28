@@ -40,13 +40,3 @@ function AB() {
 //
 //
 
-//Themessssss
-window.addEventListener("load", () => {
-    const themePicker = document.getElementById("theme-picker")
-    document.querySelector("html").setAttribute("data-theme", localStorage.getItem("theme"))
-    themePicker.addEventListener('change', function() {
-      const theme = this.value
-      document.querySelector("html").setAttribute("data-theme", theme)
-      localStorage.setItem("theme", theme);
-    })
-  })
