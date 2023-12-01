@@ -29,18 +29,7 @@ body{
 h1 {
   font-family: 'Retro', sans-serif;
 }
-.topnav {
-  color: white;
-  display: inline-block;
-  padding: 15px;
-  line-height: 100%;
-  font-family: 'Retro', sans-serif;
-  -moz-border-radius: 1%;
-  border-radius: 1%;
-  background-color: gray;
-  text-align: center;
-  font-size: 2em;
-}
+
 a:any-link{
   color: white;
 }
@@ -85,6 +74,7 @@ h3 [data-theme = "cartoon"] {
 	
 #navblob img{
 	width: 3em;
+  height: 3em;
 }
 
 .navexplain{
