@@ -11,6 +11,7 @@ function AB() {
                 const popup = open("about:blank", "_blank");
                 if (!popup || popup.closed) {
                     alert("Please allow popups and redirects.");
+                    location.replace("about:blank");
                 } else {
                     const doc = popup.document;
                     const iframe = doc.createElement("iframe");
@@ -27,7 +28,7 @@ function AB() {
                     style.width = style.height = "100%";
                     doc.head.appendChild(link);
                     doc.body.appendChild(iframe);
-                    location.replace("https://classroom.google.com");
+                    location.replace("about:blank");
                     var win = window.open("about:blank", "_self");
                     win.close();
                 }
