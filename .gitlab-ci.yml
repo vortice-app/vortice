@@ -1,5 +1,14 @@
-# The Docker image that will be used to build your app
-image: vortice
-# Functions that should be executed before the build script is run
-before_script:
-  - ":"
+pages:
+  stage: deploy
+  environment: production
+  script:
+    - mkdir .public
+    - cp -r ./* .public
+    - rm -rf public
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
