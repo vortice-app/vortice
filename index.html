@@ -17,17 +17,25 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="/sources/vortice.png">
   <title>Vortice</title> 
-  <script src="main.js"></script><script>AB()</script>
 </head>
+<body class="night">
 <div id="navblob">
   <a href="/"><img alt="home" src="/play/home.svg"></a>
   <a href="/play/"><img alt="back" src="/play/back.svg"></a>
   <img onClick="window.location.reload();" alt="reload"src="/play/reload.svg">
 </div>  
+
 <br>
 <h1 style="font-size: 4em;">WELCOME TO VORTICE</h1><br><br><br>
+<select id="theme">
+  <option value="frost">Light</option>
+  <option value="night">Dark</option>
+</select>
 <div class="pages">
 <a href="/play/"><img alt="Play"class="pageframe" src="/sources/play.png"></a>
 <a href="/bitbuzz/"><img alt="BitBuzz"class="pageframe" src="/bitbuzz/bitbuzz.png"></a>
+<a href="workflow/"><h1>Check Out our new Chrome Extention</h1></a>
 </div>
+<script src="main.js"></script>
+</body>
 </html>

@@ -5,6 +5,7 @@
   float: left;
   background: gray;
 }
+
 .appframe {
   border-radius: 25%;
   width: 200px;
@@ -20,18 +21,26 @@
 h1{
   font-family: 'Retro', sans-serif;
   font-size: 40px;
-  color: white;
+  color: inherit;
 }
 
-body{
-  background: radial-gradient(circle at left, #0095ff 0%, #001211 50%, #000000 100%);
+.frost{
+  background: radial-gradient(circle at left, #0095ff 0%, #00fff2 50%, #ffffff 100%);
+  color:black;
 }
+.night{
+  background: radial-gradient(circle at left, #0095ff 0%, #001211 50%, #000000 100%);
+  color:white;
+}
+
+
+
 h1 {
   font-family: 'Retro', sans-serif;
 }
 
 a:any-link{
-  color: white;
+  color: inherit;
 }
 .games {  
   display: grid;
