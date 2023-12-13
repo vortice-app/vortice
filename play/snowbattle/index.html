@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width;">
+    <script>
+        if (window.parent !== window.self) window.parent.postMessage("bonk", "*");
+        window.addEventListener("DOMContentLoaded", function () {
+            document.body.style.margin = "0";
+            document.body.style.height = "100vh";
+            document.body.style.overflow = "hidden";
+        });
+    </script>
+    <html lang="en-us">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
+            <title>SnowBattle.io - Vortice Games</title>
+            <link href="shared/style.css" rel="stylesheet" />
+            <link rel="stylesheet" href="TemplateData56/style.css" />
+            <script src="TemplateData56/UnityProgress.js"></script>
+            	<!--Vortice Content-->
+	<link rel="shortcut icon" type="image/x-icon" href="/sources/vortice.png"><link rel="stylesheet" type="text/css" href="/nav.css">
+	<!--End Vortice Content-->
+            <script src="Build/UnityLoader.js"></script>
+            <script>
+                window.origBlob = window.Blob;
+                window.Blob = function (array, options) {
+                    if (array[1] instanceof Uint8Array) {
+                        array[1] = new TextDecoder("utf-8").decode(array[1]).replace(/window\.top\.location\.href|window\.location\.href|document\.referrer|document\.URL/g, '"https://storage.y8.com/"');
+                    }
+                    return new window.origBlob(array, options);
+                };
+                var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Snowbattle_io-new.json", {
+                    onProgress: UnityProgress,
+                    Module: {
+                        onRuntimeInitialized: function () {
+                            UnityProgress(gameInstance, "complete");
+                        },
+                    },
+                });
+            </script>
+            <script src="shared/lib.js" type="text/javascript"></script>
+            <script src="shared/gamebreak/gamebreak.js" type="text/javascript"></script>
+        </head>
+        <body>
+            <div id="navblob">
+                <a href="/"><img alt="home" src="/play/home.svg"></a>
+                <a href="/play/"><img alt="back" src="/play/back.svg"></a>
+                <img onClick="window.location.reload();" alt="reload"src="/play/reload.svg">
+              </div>  
+            <div class="webgl-content">
+                <div id="gameContainer" style="width: 100vw; height: 100vh;"></div>
+            </div>
+        </body>
+    </html>
+</html>

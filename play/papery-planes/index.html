@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Papery Planes - Vortice Games</title>
+	<!--Vortice Content-->
+	<link rel="icon" type="image/x-icon" href="/sources/vortice.png"><link rel="stylesheet" type="text/css" href="/nav.css">
+	<!--End Vortice Content-->
+  <script>
+    window.config = {
+      loader: "unity",
+      debug: false,
+      maxRatio: 16 / 9,
+      minRatio: 9 / 16,
+
+      title: "Papery Planes",
+
+      thumbnail: "thumb.png",
+      numScreenshots: 4,
+
+      unityWebglBuildUrl: "ppw.json",
+      unityWebglLoaderUrl: "UnityLoader.2019.1.js",
+
+      // **** Optional Settings ****
+      fileSize: 12,
+      loadingComments: ["Loading..."],
+      cachedDecompressedFileSizes: {
+        "ppw.wasm.framework.unityweb": 533280,
+        "ppw.data.unityweb": 12545865,
+        "ppw.wasm.code.unityweb": 20975416,
+      },
+    };
+  </script>
+</head>
+<body>
+  <div id="navblob">
+    <a href="/"><img alt="home" src="/play/home.svg"></a>
+    <a href="/play/"><img alt="back" src="/play/back.svg"></a>
+    <img onClick="window.location.reload();" alt="reload"src="/play/reload.svg">
+  </div>  
+  <script src="master-loader.js"></script>
+</body>

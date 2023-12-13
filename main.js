@@ -1,3 +1,29 @@
+var themeInput = document.getElementById("theme");
+themeInput.addEventListener("change", function(){
+    changeTheme(this.value);
+})
+
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme) {
+    changeTheme(savedTheme);
+    themeInput.value = savedTheme;
+}
+function changeTheme(theme) {
+    const body = document.body;
+
+    // Remove existing theme classes
+    body.classList.remove('frost', 'night', 'ruby', 'orange', 'lemon', 'grass', 'winter', 'royal', 'christmas');
+
+    // Add the selected theme class
+    body.classList.add(theme);
+
+    localStorage.setItem('theme', theme);
+
+}
+
+
+
 function AB() {
             let inFrame;
 
@@ -10,8 +36,7 @@ function AB() {
             if (!inFrame && !navigator.userAgent.includes("Firefox")) {
                 const popup = open("about:blank", "_blank");
                 if (!popup || popup.closed) {
-                    alert("Please allow popups and redirects.");
-                    location.replace("about:blank");
+                    alert("Unblock Failed. Please allow popups and redirects.");
                 } else {
                     const doc = popup.document;
                     const iframe = doc.createElement("iframe");
