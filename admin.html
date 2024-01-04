@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>Admin Panel</title>
+    <script src="admin.js"></script>
+</head>
+<body>
+    <a href="/">Back</a>
+    <h1>Heehee secret admin page</h1>
+    <h1>Btw, if you found this its a secret go on it on your friends computers to ban them.</h1>
+    <button id="ban">Ban this boi from vortice</button>
+    <button id="unban">Unban this boi</button>
+    <button id="golden">Promote to golden user</button>
+    <button id="normal">Demote to normal user</button>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const ban = document.getElementById("ban");
+    const unban = document.getElementById("unban");
+    const golden = document.getElementById("golden");
+    const normal = document.getElementById("normal");
+    ban.addEventListener("click", function () {
+        localStorage.setItem("status", "banned");
+    });
+    unban.addEventListener("click", function () {
+        localStorage.setItem("status", "normal");
+    });
+    golden.addEventListener("click", function () {
+        localStorage.setItem("status", "golden");
+    });
+    normal.addEventListener("click", function () {
+        localStorage.setItem("status", "normal");
+    })
+})
+</script>
+</body>

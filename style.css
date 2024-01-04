@@ -4,6 +4,10 @@
   height: 200px;
   float: left;
   background: gray;
+  transition: all 0.5s ease;
+}
+.gameappframe:hover{
+  transform:  scale(1.2);
 }
 
 .appframe {
@@ -14,10 +18,16 @@
 }
 .pageframe {
   border-radius: 25%;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   float: left;
+  transition: all 0.5s ease;
+
 }
+.pageframe:hover {
+  transform:  scale(1.2);
+}
+
 h1{
   font-family: 'Retro', sans-serif;
   font-size: 40px;
@@ -25,14 +35,55 @@ h1{
 }
 
 .frost{
-  background: radial-gradient(circle at left, #0095ff 0%, #00fff2 50%, #ffffff 100%);
+  background: radial-gradient(circle at left, #60bdff 0%, #7cbeff 50%, #ffffff 100%);
   color:black;
 }
 .night{
   background: radial-gradient(circle at left, #0095ff 0%, #001211 50%, #000000 100%);
   color:white;
 }
+.ruby{
+  background: radial-gradient(circle at left, #ff1313 0%, #ffd3d3 50%, #ff0000 100%);
+  color:black;
+}
 
+.ruby{
+  background-color: crimson;
+  color: rgb(92, 0, 0);
+}
+.orange{
+  background-color: orange;
+  color: orangered;
+}
+.lemon{
+  background-color:#F4F85F;
+  color: orangered;
+}
+.grass{
+  background-color: green;
+  color: greenyellow;
+}
+.winter{
+  background-color: lightblue;
+  color: blue;
+}
+.royal{
+  background-color: indigo;
+  color: plum;
+}
+.christmas{
+  background-color: lightgreen;
+  color: red;
+}
+.golden{
+  background: radial-gradient(circle at left, #ffd700 0%, #ffffff 50%, #ffd700 100%);
+  color:black;
+}
+
+select{
+  border-radius: 10px;
+  width: 20%;
+font-size: 20px;}
 
 
 h1 {
@@ -46,9 +97,10 @@ a:any-link{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 50px;}
-  .pages {  
+  .pages {
+    margin: 50px;  
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, .5fr);
     gap: 2px;}
 .gameslist {  
   display: grid;
