@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basketball Shooting Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    #game-container {
+      position: relative;
+      width: 800px;
+      height: 400px;
+      margin: 20px auto;
+      overflow: hidden;
+    }
+
+    #hoop {
+      position: absolute;
+      width: 200px;
+      height: 150px;
+      background: url('basketball_hoop.webp') no-repeat;
+      background-size: cover;
+      top: 20px;
+      right: 80px;
+    }
+
+    #rack {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .rack-item {
+      width: 50px;
+      height: 50px;
+      background: url('basketball.webp') no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+      margin: 0 10px;
+      transition: transform 1s ease-in-out;
+      animation: moveBasketball 15s linear infinite;
+      cursor: pointer;
+
+    }
+
+    
+
+    #success-image,
+    #fail-image {
+      display: none;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      transition: opacity .3s ease-in-out;
+    }
+
+    #success-image {
+      background: url('success.webp') no-repeat;
+    }
+
+    #fail-image {
+      background: url('fail.webp') no-repeat;
+    }
+
+    @keyframes moveBasketball {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(800px); }
+      100% { transform: translateX(0); }
+    }
+    @keyframes shootBasketball {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-400px); }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Basketball Shooting Game</h1>
+<p>Click anywhere on the rack to shoot!</p>
+
+<div id="game-container">
+  <div id="hoop"></div>
+  <div id="rack">
+    <div onclick="shootBasketball()" class="rack-item" id="basketball"></div>
+  </div>
+  <div id="success-image"></div>
+  <div id="fail-image"></div>
+</div>
+
+<p>Score: <span id="score">0</span></p>
+<p>Time Left: <span id="time">30</span> seconds</p>
+
+<script>
+  let score = 0;
+  let time = 30;
+  let isAnimating = false;
+
+  function shootBasketball() {
+    if (isAnimating) {
+      return;
+    }
+  
+
+
+
+
+    isAnimating = true;
+
+    // Increased chance of success
+    const isSuccess = true;
+
+    const rackItem = document.getElementById('basketball');
+    const successImage = document.getElementById('success-image');
+    const failImage = document.getElementById('fail-image');
+
+    if (isSuccess) {
+      score++;
+      document.getElementById('score').innerText = score;
+
+      successImage.style.left = rackItem.offsetLeft + 'px';
+      successImage.style.top = rackItem.offsetTop + 'px';
+      successImage.style.display = 'block';
+
+      setTimeout(() => {
+        successImage.style.opacity = '0';
+        rackItem.style.transform = 'translateX(300px)';
+        setTimeout(() => {
+          successImage.style.display = 'none';
+          successImage.style.opacity = '1';
+          rackItem.style.transform = 'none';
+          resetBasketball();
+          isAnimating = false;
+        }, 1000);
+      },500);
+    } else {
+      failImage.style.left = rackItem.offsetLeft + 'px';
+      failImage.style.top = rackItem.offsetTop + 'px';
+      failImage.style.display = 'block';
+
+      setTimeout(() => {
+        failImage.style.opacity = '0';
+        setTimeout(() => {
+          failImage.style.display = 'none';
+          failImage.style.opacity = '1';
+          resetBasketball();
+          isAnimating = false;
+        }, 1000);
+      }, 500);
+    }
+  }
+
+  function resetBasketball() {
+    const rackItem = document.getElementById('basketball');
+
+    // Reset basketball position
+    rackItem.style.transform = 'none';
+  }
+
+  function updateTimer() {
+    document.getElementById('time').innerText = time;
+
+    if (time > 0) {
+      time--;
+      setTimeout(updateTimer, 1000);
+    } else {
+      endGame();
+    }
+  }
+
+  function endGame() {
+    alert('Game Over! Your final score is: ' + score);
+    score = 0;
+    time = 30;
+    document.getElementById('score').innerText = score;
+    document.getElementById('time').innerText = time;
+  }
+
+  // Start the game timer
+  updateTimer();
+</script>
+
+</body>
+</html>

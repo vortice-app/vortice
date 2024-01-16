@@ -1,10 +1,12 @@
 
 document.addEventListener("DOMContentLoaded", function(){
+
+
+changeName();
     var themeInput = document.getElementById("theme");
     themeInput.addEventListener("change", function(){
         changeTheme(this.value);
     })
-
 
 const status = localStorage.getItem("status");
 if(status == "banned"){
@@ -92,3 +94,40 @@ function AB() {
 //
 //
 
+function changeName(override){
+    if (override == true){
+        localStorage.setItem("name", prompt("We're Back, What's your name?", ""));
+        if (localStorage.getItem("name") == null || localStorage.getItem("name") == ""){
+            localStorage.setItem("name", "Guest");
+            location.reload();
+        }
+    }
+    let name = localStorage.getItem("name");
+        let text;
+        if (name){
+            const welcome = document.getElementById("welcome");
+            if(name == "Guest"){
+                if(welcome){welcome.innerHTML = "Welcome back to Vortice";}
+            } else if(name == "Trig"){
+                if(welcome){welcome.innerHTML = "Welcome back to Vortice Trig, owner of Vortice"; localStorage.setItem("status", "golden")}
+            } else if(name == "Mace"){
+                if(welcome){welcome.innerHTML = "Sorry Mace, you're banned"; localStorage.setItem("status", "banned")}
+            } else {
+                if(welcome){welcome.innerHTML = "Welcome back to Vortice, " + name;}
+            }
+        } else {
+            let person = prompt("Welcome to Vortice, What's your name?", "");
+            
+            if (person == null || person == "") {
+                text = "Welcome to Vortice!";
+                localStorage.setItem("name", "Guest");
+            } else if(name == "Trig"){
+                localStorage.setItem("status", "golden");
+            } else if (name == "Mace"){
+                localStorage.setItem("status", "banned");
+            } else {
+                localStorage.setItem("name", person);
+                location.reload();
+            }
+        }
+}

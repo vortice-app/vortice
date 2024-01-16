@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="./tailwind.min.css">
+<style>    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+  .sobig{height: 100%; width: 700px;}  #search{color:black; border-radius: 50px;padding: 10px;height: 40px;width: 1000%;}  .search-container {
+  text-align: center;
+  margin: auto;
+  width: 40%;
+  border: 3px;
+  padding: 10px;
+  position: absolute;
+  display: flex;
+}</style>
+
+
+
+<div class="space-y-4 border-2 border-gray-300 dark:border-gray-700 p-4 sobig">
+    <h2 class="text-4xl font-bold tracking-tighter">Search</h2>
+      <div class="search-container">
+          <button aria-label="Search" type="button" id="search-button"><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="absolute left-2.5 top-2.5 h-6 w-6 text-gray-500 dark:text-gray-400"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg></button>
+        
+        <input
+          class="flex h-10 rounded-md border border-input px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full bg-white shadow-none appearance-none pl-10 dark:bg-gray-950"
+          placeholder="Search with Google..."
+          id="search"
+        />
+      </div>
+  </div>
+
+  <script>    var searchBtn = document.getElementById("search-button");
+    let searchInput = document.getElementById("search");
+    searchBtn.addEventListener("click", search);
+    searchInput.addEventListener("keyup", function(e) {
+        if (e.key === "Enter") {
+            search();
+        }
+    });
+    
+    function search(){
+    let search = document.getElementById("search");
+        let query = search.value;
+        if (query.replace(/\s/g, '').length) {
+            if (!is_valid_url(query)) {
+                    query = "https://www.google.com/search?q=" + query;
+            }
+            window.location.replace(query);
+        }
+        return null;
+}
+function is_valid_url(_string) {
+            const match_pattern = /^(?:\w+:)?\/\/([^\s.]+\.\S{2}|localhost[:?\d]*)\S*$/;
+            return match_pattern.test(_string);
+        }</script>
