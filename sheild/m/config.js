@@ -1,5 +1,5 @@
 self.__uv$config = {
-    prefix: '/a/',
+    prefix: '/sheild/a/',
     bare: 'https://mathplayground.cloud/v/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,

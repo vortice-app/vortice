@@ -109,7 +109,7 @@ function changeName(override){
             if(name == "Guest"){
                 if(welcome){welcome.innerHTML = "Welcome back to Vortice";}
             } else if(name == "Trig"){
-                if(welcome){welcome.innerHTML = "Welcome back, Owner of Vortice"; localStorage.setItem("status", "golden")}
+                if(welcome){welcome.innerHTML = "Welcome back, Owner of Vortice"; localStorage.setItem("theme", "royal")}
             } else if(name == "Mace"){
                 if(welcome){welcome.innerHTML = "Sorry Mace, you're banned"; localStorage.setItem("status", "banned")}
             } else {
