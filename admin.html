@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
     <title>Admin Panel</title>
-    <script src="admin.js"></script>
 </head>
 <body>
     <a href="/">Back</a>
@@ -15,6 +14,12 @@
     <p>Also check out vortice sheild, it unblocks any website: <a href="/sheild/">sheild</a></p>
     <p>Also check out vortice bot, it's like chatGPT but slower for the time being' <a href="/ai/">bot</a></p>
 <script>
+    const unlocked = localStorage.getItem("unlocked");
+    if(unlocked == true){
+        
+    } else {
+        const unlock = "<head><title>Admin Panel Locked</title></head><body><h1>Admin Panel Locked</h1></body>"
+    }
     document.addEventListener("DOMContentLoaded", function () {
     const ban = document.getElementById("ban");
     const unban = document.getElementById("unban");
