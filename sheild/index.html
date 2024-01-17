@@ -38,7 +38,7 @@
     <script>
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sheild/m/sw.js', {
-          scope: '/sheild/m/a/',
+          scope: '/sheild/m/',
         })
       })
 
@@ -66,7 +66,7 @@
           (iframe) => iframe.classList.contains('active')
         )
 
-        activeIframe.src = '/sheild/m/a/' + ('encodedUrl', __uv$config.encodeUrl(url))
+        activeIframe.src = '/sheild/m/' + ('encodedUrl', __uv$config.encodeUrl(url))
         activeIframe.dataset.tabUrl = url
         document.querySelector('form input').value = url
         console.log(activeIframe.dataset.tabUrl)
