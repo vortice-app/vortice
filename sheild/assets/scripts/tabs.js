@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const tabList = document.getElementById('tab-list')
   const iframeContainer = document.getElementById('iframe-container')
   const rightSideNav = document.getElementById('right-side-nav')
-  const toggleNavButton = document.getElementById('toggle-nav')
 
   let tabCounter = 1
   let navOpen = true
@@ -139,16 +138,6 @@ function newTab(){
     }
   }
 
-  toggleNavButton.addEventListener('click', () => {
-    navOpen = !navOpen
-    toggleNavButton.classList.toggle('open')
-    if (navOpen) {
-      rightSideNav.style.transform = 'translateX(0)'
-    } else {
-      rightSideNav.style.transform = 'translateX(-100%)'
-    }
-  })
-
   let dragTab = null
 
   tabList.addEventListener('dragstart', (event) => {
@@ -175,22 +164,9 @@ function newTab(){
 
   const container = document.querySelector('.container')
 
-  toggleNavButton.addEventListener('click', () => {
-    navOpen = !navOpen
-    toggleNavButton.classList.toggle('open')
-    container.classList.toggle('nav-closed')
-    if (navOpen) {
-      rightSideNav.style.transform = 'translateX(0)'
-    } else {
-      rightSideNav.style.transform = 'translateX(-100%)'
-    }
-  })
 
-  toggleNavButton.addEventListener('click', () => {
-    navOpen = !navOpen
-    toggleNavButton.classList.toggle('open')
-    container.classList.toggle('nav-closed')
-  })
+
+
 })
 
 function reload() {

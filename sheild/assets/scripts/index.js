@@ -4,7 +4,7 @@ const input = document.querySelector('input')
 form.addEventListener('submit', async (event) => {
   event.preventDefault()
   window.navigator.serviceWorker
-    .register('/sheild/m/sw.js', {
+    .register('/sheild/sw.js', {
       scope: __uv$config.prefix,
     })
     .then(() => {
@@ -34,7 +34,7 @@ function images(value) {
 function blank(value) {
   let iframe = document.querySelector('.iframe.active')
   window.navigator.serviceWorker
-    .register('/sheild/m/sw.js', {
+    .register('/sheild/sw.js', {
       scope: __uv$config.prefix,
     })
     .then(() => {
