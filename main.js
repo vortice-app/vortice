@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
 
-changeName();
     var themeInput = document.getElementById("theme");
     themeInput.addEventListener("change", function(){
         changeTheme(this.value);
@@ -94,40 +93,58 @@ function AB() {
 //
 //
 
-function changeName(override){
-    if (override == true){
-        localStorage.setItem("name", prompt("We're Back, What's your name?", ""));
-        if (localStorage.getItem("name") == null || localStorage.getItem("name") == ""){
-            localStorage.setItem("name", "Guest");
-            location.reload();
-        }
-    }
-    let name = localStorage.getItem("name");
-        let text;
-        if (name){
-            const welcome = document.getElementById("welcome");
-            if(name == "Guest"){
-                if(welcome){welcome.innerHTML = "Welcome back to Vortice";}
-            } else if(name == "Trig"){
-                if(welcome){welcome.innerHTML = "Welcome back, Owner of Vortice"; localStorage.setItem("theme", "royal")}
-            } else if(name == "Mace"){
-                if(welcome){welcome.innerHTML = "Sorry Mace, you're banned"; localStorage.setItem("status", "banned")}
-            } else {
-                if(welcome){welcome.innerHTML = "Welcome back to Vortice, " + name;}
-            }
+
+
+
+
+
+
+
+const  links = ["https://roundrockisd.online/v/","https://mathplayground.cloud/v/","https://tutor4math.vercel.app/v/", "https://interstellar-kappa-six.vercel.app/v/", "https://s2.cambrianscientific.com/v/", "https://mre.stormfood.com/v/", "https://e.tecteach.net/v/", "https://us.lakeballs.fi/v/", "https://abcusd-unblocked.com/v/", "https://studyforsubjects.vercel.app/v/", "https://schooltech-theta.vercel.app/v/", "https://sunburst.sun.2of1.org/v/", "https://interstellarpro.netlify.app/v/"];
+
+async function testLoadTime(links) {
+    const progressBar = document.getElementById("progress");
+    var progress = 0;
+    let fastestTime = Infinity;
+  
+    for (const url of links) {
+      const startTime = performance.now();
+  progress++;
+  var percent = (progress / links.length) * 100;
+  progressBar.style.width = percent + "%";
+      try {
+        const response = await fetch(url, { method: 'HEAD' });
+        const endTime = performance.now();
+        if (response.status == "200") {
+          const loadTime = endTime - startTime;
+  
+          // Check if this is the fastest URL
+          if (loadTime < fastestTime) {
+            fastestTime = loadTime;
+            fastestUrl = url;
+          }
         } else {
-            let person = prompt("Welcome to Vortice, What's your name?", "");
-            
-            if (person == null || person == "") {
-                text = "Welcome to Vortice!";
-                localStorage.setItem("name", "Guest");
-            } else if(name == "Trig"){
-                localStorage.setItem("status", "golden");
-            } else if (name == "Mace"){
-                localStorage.setItem("status", "banned");
-            } else {
-                localStorage.setItem("name", person);
-                location.reload();
-            }
+          //console.error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
         }
-}
+      } catch (error) {
+        //console.error(`Error fetching ${url}: ${error.message}`);
+      }
+    }
+  
+    return fastestUrl;
+  }
+  
+  // Example usage:
+  testLoadTime(links)
+    .then(fastestUrl => {
+      if (fastestUrl) {
+        console.log(`The fastest URL is: ${fastestUrl}`);
+      } else {
+        console.log('All URLs failed to load.');
+      }
+    })
+    .catch(error => {
+      console.error(`Error testing load time: ${error.message}`);
+    });
+  
+

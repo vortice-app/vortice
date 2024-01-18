@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function (event) {
+
   const addTabButton = document.getElementById('add-tab')
   const tabList = document.getElementById('tab-list')
   const iframeContainer = document.getElementById('iframe-container')
