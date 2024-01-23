@@ -1,5 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function(){
+    document.write("This version of vortice is not compatible with your browser");
 
 
     var themeInput = document.getElementById("theme");
