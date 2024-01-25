@@ -6,37 +6,24 @@
     <a href="/">Back</a>
     <h1>Heehee secret page</h1>
     <h1>Btw, if you found this its a secret go on it on your friends computers to ban them.</h1>
-    <button id="ban">Ban this boi from vortice</button>
-    <button id="unban">Unban this boi</button>
-    <button id="golden">Promote to golden user</button>
-    <button id="normal">Demote to normal user</button>
+    <button onclick="localStorage.setItem('status', 'banned');">Ban this boi from vortice</button>
+    <button onclick="localStorage.setItem('status', 'normal');">Unban this boi</button>
+    <button onclick="localStorage.setItem('status', 'golden');">Promote to golden user</button>
+    <button onclick="localStorage.setItem('status', 'normal');">Demote to normal user</button>
+    <button onclick="localStorage.setItem('admin-unlocked', 'false');window.location.reload();">Lock admin panel</button>
     <p>Also, test out unreleased games here: <a href="/play/beta.html">beta</a></p> 
     <p>Also check out vortice sheild, it unblocks any website: <a href="/sheild/">sheild</a></p>
     <p>Also check out vortice bot, it's like chatGPT but slower for the time being' <a href="/ai/">bot</a></p>
 <script>
-    const unlocked = localStorage.getItem("unlocked");
-    if(unlocked == true){
+    document.addEventListener("DOMContentLoaded", function () {
+        const unlocked = localStorage.getItem("admin-unlocked");
+    if(unlocked == "true"){
         
     } else {
-        const unlock = "<head><title>Admin Panel Locked</title></head><body><h1>Admin Panel Locked</h1></body>"
+
+        document.write("<h1>Admin Panel locked</h1><input id='password' type='password'><button id='unlock'>Unlock</button>");
+        const passwordInput = document.getElementById("password"); document.getElementById("unlock").addEventListener("click", function () {if(passwordInput.value == "1234"){localStorage.setItem("admin-unlocked", "true");window.location.reload();}});
     }
-    document.addEventListener("DOMContentLoaded", function () {
-    const ban = document.getElementById("ban");
-    const unban = document.getElementById("unban");
-    const golden = document.getElementById("golden");
-    const normal = document.getElementById("normal");
-    ban.addEventListener("click", function () {
-        localStorage.setItem("status", "banned");
-    });
-    unban.addEventListener("click", function () {
-        localStorage.setItem("status", "normal");
-    });
-    golden.addEventListener("click", function () {
-        localStorage.setItem("status", "golden");
-    });
-    normal.addEventListener("click", function () {
-        localStorage.setItem("status", "normal");
-    })
-})
+});
 </script>
 </body>
