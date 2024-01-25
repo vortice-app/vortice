@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function(){
 
-
+document.write("<h1>This isnt making me money so i shut it down</h1>");
     var themeInput = document.getElementById("theme");
     themeInput.addEventListener("change", function(){
         changeTheme(this.value);
